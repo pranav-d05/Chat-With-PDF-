@@ -40,7 +40,7 @@ def main():
             docs = knowledge_base.similarity_search(user_ques)
             llm = ChatGoogleGenerativeAI(
                      model="gemini-2.5-flash",
-                     google_api_key="AIzaSyADZ2kDnuJqRZbai-bzIlHnZM3S-9lEMsw"
+                     google_api_key="YOUR_API_KEY"
                     )
             chain = load_qa_chain(llm,chain_type ="stuff")
             response = chain.run(input_documents=docs,question=user_ques)
